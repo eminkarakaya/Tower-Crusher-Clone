@@ -55,11 +55,13 @@ public class FloorManager : Singleton<FloorManager>
     }
     public List<Floor> GetUpperFloors(Floor currFloor)
     {
+        
         List<Floor> empty = new List<Floor>();
         for (int i = floors.IndexOf(currFloor); i < floors.Count; i++)
         {       
             empty.Add(floors[i]);
         }
+        Debug.Log(empty.Count);
         return empty;
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91a46f74e4b79ea49918c201c8105d61, type: 3}
-  m_Name: Level1Gun
+  m_Name: Level2Gun
   m_EditorClassIdentifier: 
   _boostedAttackRate: 2
-  _attackRate: 2
-  _earnedMoneyPerFire: 100
+  _attackRate: 1.4
+  _earnedMoneyPerFire: 400
   _moveSpeed: 4
-  _level: 1
-  _nextGun: {fileID: 3833847367216799502, guid: 23505d180edad0541a6ea646e8eaad2c, type: 3}
+  _level: 2
+  _nextGun: {fileID: 3147338085316864492, guid: 460bee6b71d14434e9b53c418b01262f, type: 3}

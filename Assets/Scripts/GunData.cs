@@ -8,8 +8,10 @@ public class GunData : ScriptableObject
     [SerializeField] private float _attackRate; 
     [SerializeField] private int _earnedMoneyPerFire; 
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private int _level;
     [SerializeField] private Gun _nextGun; // birleştikten sonra oluscak sılah
 
+    public int Level => _level;
     public float AttackRate => _attackRate;
     public float BoostedAttackRate => _boostedAttackRate;
     public int EarndMoneyPerFire => _earnedMoneyPerFire;

@@ -11,6 +11,7 @@ public class Brick : MonoBehaviour
     }
     public void Destroy()
     {
+        Debug.Log(this, this);
         gameObject.SetActive(false);
         floor.brickCount--;
         floor.CheckFloor(floor);

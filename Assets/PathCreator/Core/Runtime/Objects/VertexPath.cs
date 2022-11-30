@@ -262,11 +262,7 @@ namespace PathCreation {
                     if (t < 0) {
                         t += Mathf.CeilToInt (Mathf.Abs (t));
                     }
-                    Debug.Log(t);
-                    t %= 1;
-                    GetPercentOnPath = t + Time.deltaTime;
-                    if (GetPercentOnPath > 1)
-                        t = 0;
+                    t %= 1;                    
 
                     break;
                 case EndOfPathInstruction.Reverse:
