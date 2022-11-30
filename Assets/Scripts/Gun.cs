@@ -25,7 +25,7 @@ public class Gun : MonoBehaviour
             Fire(TargetBrick());
         }
     }
-    private Brick TargetBrick()
+    public Brick TargetBrick()
     {
         if (Physics.Raycast(transform.position, -transform.right, out hit, 100f, layer))
         {
@@ -43,10 +43,12 @@ public class Gun : MonoBehaviour
             return;
         _attackRate = data.AttackRate;
         var obj = ObjectPool.Instance.GetPooledObject(0);
+        obj.GetComponent<Bullet>().targetBrick = targetBrick;
+        obj.GetComponent<Bullet>().bulletExitPoint = bulletExitPoint;
         obj.transform.localRotation = this.transform.localRotation;
         obj.transform.position = bulletExitPoint.position;
         obj.SetActive(true);
         obj.GetComponent<Bullet>().earnedMoney = data.EarndMoneyPerFire;    
-        StartCoroutine(obj.GetComponent<Bullet>().Fire(targetBrick, bulletExitPoint));
+        //StartCoroutine(obj.GetComponent<Bullet>().Fire(targetBrick, bulletExitPoint));
     }
 }

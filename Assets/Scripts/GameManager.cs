@@ -145,12 +145,12 @@ public class GameManager : Singleton<GameManager> , IDataPersistence
         if (isMerging)
             return;
 
-        isMerging = true;
         for (int i = 0; i < gunLevels.Count; i++)
         {
-            
+            Debug.Log("qweqew");
             if (gunLevels[i].Count >= mergeCount)
             {
+                isMerging = true;
                 var obj = Instantiate(gunLevels[i][0].nextGun, parent.position, Quaternion.identity);
                 if(gunLevels.Count >= i + 1)
                 {

@@ -2,8 +2,16 @@ using System.Collections;
 using UnityEngine;
 public class Bullet : MonoBehaviour
 {
+    public Transform bulletExitPoint;
+    public Brick targetBrick;
     public int earnedMoney;
     [SerializeField] private float _speed;
+    private void Start()
+    {
+        Destroy(this.gameObject,4f);
+        StartCoroutine(Fire(targetBrick, bulletExitPoint));
+    }
+    
     public IEnumerator Fire(Brick targetBrick,Transform bulletExitPoint)
     {
          // mermiyi olusturup posizyon rotasyonunu ayarlýyorum
