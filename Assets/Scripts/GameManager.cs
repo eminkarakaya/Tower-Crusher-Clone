@@ -51,9 +51,10 @@ public class GameManager : Singleton<GameManager> , IDataPersistence
         routeCount = data.routeCount;
         for (int j = 0; j < routeCount; j++)
         {
-            for (int i = 0; i < roads[routeCount - 1].holder.childCount; i++)
+            roads[j].roadMesh.SetActive(true);
+            for (int i = 0; i < roads[j].holder.childCount; i++)
             {
-                paths.Add(roads[routeCount - 1].holder.GetChild(i));
+                paths.Add(roads[j].holder.GetChild(i));
             }
         }
         allTextParse = FindObjectsOfType<TextParse>();
